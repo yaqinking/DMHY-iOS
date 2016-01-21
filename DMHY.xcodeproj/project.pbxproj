@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F43C24881C4B36060016A40A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C24871C4B36060016A40A /* main.m */; };
+		F43C248B1C4B36060016A40A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C248A1C4B36060016A40A /* AppDelegate.m */; };
+		F43C24941C4B36060016A40A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C24921C4B36060016A40A /* Main.storyboard */; };
+		F43C24961C4B36060016A40A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43C24951C4B36060016A40A /* Assets.xcassets */; };
+		F43C24991C4B36060016A40A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C24971C4B36060016A40A /* LaunchScreen.storyboard */; };
+		F43C24A21C4B37410016A40A /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C24A11C4B37410016A40A /* HomeTableViewController.m */; };
+		F43C24A51C4B37640016A40A /* SubscribeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C24A41C4B37640016A40A /* SubscribeTableViewController.m */; };
+		F43C24A81C4B38A90016A40A /* ToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C24A71C4B38A90016A40A /* ToolViewController.m */; };
+		F43C24AA1C4B40020016A40A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C24A91C4B40020016A40A /* CoreData.framework */; };
+		F43C24EC1C4B5D2E0016A40A /* DMHY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F43C24EA1C4B5D2E0016A40A /* DMHY.xcdatamodeld */; };
+		F43C24F51C4B5EEF0016A40A /* DMHYKeyword+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C24EE1C4B5EEF0016A40A /* DMHYKeyword+CoreDataProperties.m */; };
+		F43C24F61C4B5EEF0016A40A /* DMHYKeyword.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C24F01C4B5EEF0016A40A /* DMHYKeyword.m */; };
+		F43C24F71C4B5EEF0016A40A /* DMHYTorrent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C24F21C4B5EEF0016A40A /* DMHYTorrent+CoreDataProperties.m */; };
+		F43C24F81C4B5EEF0016A40A /* DMHYTorrent.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C24F41C4B5EEF0016A40A /* DMHYTorrent.m */; };
+		F43C24FD1C4B66270016A40A /* DMHYCategory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C24FA1C4B66270016A40A /* DMHYCategory+CoreDataProperties.m */; };
+		F43C24FE1C4B66270016A40A /* DMHYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C24FC1C4B66270016A40A /* DMHYCategory.m */; };
+		F43C25041C4B741B0016A40A /* DetailSubscribeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C25031C4B741B0016A40A /* DetailSubscribeTableViewController.m */; };
+		F43C25081C4B836C0016A40A /* TorrentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C25071C4B836C0016A40A /* TorrentItem.m */; };
+		F4C57DEC1C4F7C4400C5C37E /* TorrentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C57DEB1C4F7C4400C5C37E /* TorrentTableViewCell.m */; };
+		F4FA8D441C508F0F005D6FF6 /* DMHYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FA8D431C508F0F005D6FF6 /* DMHYTool.m */; };
+		FB5E5C448E39FC400DDE704E /* libPods-DMHY.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E86DAF4C7D963E689BDFF0D /* libPods-DMHY.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		093CEF69ECFDAD03309D06D5 /* Pods-DMHY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMHY.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMHY/Pods-DMHY.release.xcconfig"; sourceTree = "<group>"; };
+		1E86DAF4C7D963E689BDFF0D /* libPods-DMHY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DMHY.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CA3AF7E2A5FE97615E0E5A /* Pods-DMHY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMHY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DMHY/Pods-DMHY.debug.xcconfig"; sourceTree = "<group>"; };
+		F43C24831C4B36060016A40A /* DMHY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMHY.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43C24871C4B36060016A40A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F43C24891C4B36060016A40A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F43C248A1C4B36060016A40A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F43C24931C4B36060016A40A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F43C24951C4B36060016A40A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F43C24981C4B36060016A40A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F43C249A1C4B36060016A40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F43C24A01C4B37410016A40A /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		F43C24A11C4B37410016A40A /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		F43C24A31C4B37640016A40A /* SubscribeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeTableViewController.h; sourceTree = "<group>"; };
+		F43C24A41C4B37640016A40A /* SubscribeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeTableViewController.m; sourceTree = "<group>"; };
+		F43C24A61C4B38A90016A40A /* ToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolViewController.h; sourceTree = "<group>"; };
+		F43C24A71C4B38A90016A40A /* ToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolViewController.m; sourceTree = "<group>"; };
+		F43C24A91C4B40020016A40A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F43C24EB1C4B5D2E0016A40A /* DMHY.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DMHY.xcdatamodel; sourceTree = "<group>"; };
+		F43C24ED1C4B5EEF0016A40A /* DMHYKeyword+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DMHYKeyword+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F43C24EE1C4B5EEF0016A40A /* DMHYKeyword+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DMHYKeyword+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F43C24EF1C4B5EEF0016A40A /* DMHYKeyword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHYKeyword.h; sourceTree = "<group>"; };
+		F43C24F01C4B5EEF0016A40A /* DMHYKeyword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHYKeyword.m; sourceTree = "<group>"; };
+		F43C24F11C4B5EEF0016A40A /* DMHYTorrent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DMHYTorrent+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F43C24F21C4B5EEF0016A40A /* DMHYTorrent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DMHYTorrent+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F43C24F31C4B5EEF0016A40A /* DMHYTorrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHYTorrent.h; sourceTree = "<group>"; };
+		F43C24F41C4B5EEF0016A40A /* DMHYTorrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHYTorrent.m; sourceTree = "<group>"; };
+		F43C24F91C4B66270016A40A /* DMHYCategory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DMHYCategory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F43C24FA1C4B66270016A40A /* DMHYCategory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DMHYCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F43C24FB1C4B66270016A40A /* DMHYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHYCategory.h; sourceTree = "<group>"; };
+		F43C24FC1C4B66270016A40A /* DMHYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHYCategory.m; sourceTree = "<group>"; };
+		F43C25021C4B741B0016A40A /* DetailSubscribeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailSubscribeTableViewController.h; sourceTree = "<group>"; };
+		F43C25031C4B741B0016A40A /* DetailSubscribeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSubscribeTableViewController.m; sourceTree = "<group>"; };
+		F43C25051C4B78300016A40A /* DMHYAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMHYAPI.h; sourceTree = "<group>"; };
+		F43C25061C4B836C0016A40A /* TorrentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentItem.h; sourceTree = "<group>"; };
+		F43C25071C4B836C0016A40A /* TorrentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentItem.m; sourceTree = "<group>"; };
+		F4C57DEA1C4F7C4400C5C37E /* TorrentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentTableViewCell.h; sourceTree = "<group>"; };
+		F4C57DEB1C4F7C4400C5C37E /* TorrentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentTableViewCell.m; sourceTree = "<group>"; };
+		F4FA8D421C508F0F005D6FF6 /* DMHYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHYTool.h; sourceTree = "<group>"; };
+		F4FA8D431C508F0F005D6FF6 /* DMHYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHYTool.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F43C24801C4B36060016A40A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43C24AA1C4B40020016A40A /* CoreData.framework in Frameworks */,
+				FB5E5C448E39FC400DDE704E /* libPods-DMHY.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7370E7F7A83B3F1897B784C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E86DAF4C7D963E689BDFF0D /* libPods-DMHY.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B096A27AA9505DAD14A2B8E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2CA3AF7E2A5FE97615E0E5A /* Pods-DMHY.debug.xcconfig */,
+				093CEF69ECFDAD03309D06D5 /* Pods-DMHY.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F43C247A1C4B36060016A40A = {
+			isa = PBXGroup;
+			children = (
+				F43C24851C4B36060016A40A /* DMHY */,
+				F43C24841C4B36060016A40A /* Products */,
+				B096A27AA9505DAD14A2B8E0 /* Pods */,
+				7370E7F7A83B3F1897B784C4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F43C24841C4B36060016A40A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F43C24831C4B36060016A40A /* DMHY.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F43C24851C4B36060016A40A /* DMHY */ = {
+			isa = PBXGroup;
+			children = (
+				F43C25051C4B78300016A40A /* DMHYAPI.h */,
+				F43C24B01C4B4CA80016A40A /* Model */,
+				F43C24891C4B36060016A40A /* AppDelegate.h */,
+				F43C248A1C4B36060016A40A /* AppDelegate.m */,
+				F43C24921C4B36060016A40A /* Main.storyboard */,
+				F43C24951C4B36060016A40A /* Assets.xcassets */,
+				F43C24971C4B36060016A40A /* LaunchScreen.storyboard */,
+				F43C249A1C4B36060016A40A /* Info.plist */,
+				F43C24861C4B36060016A40A /* Supporting Files */,
+				F43C24A01C4B37410016A40A /* HomeTableViewController.h */,
+				F43C24A11C4B37410016A40A /* HomeTableViewController.m */,
+				F43C24A31C4B37640016A40A /* SubscribeTableViewController.h */,
+				F43C24A41C4B37640016A40A /* SubscribeTableViewController.m */,
+				F43C24A61C4B38A90016A40A /* ToolViewController.h */,
+				F43C24A71C4B38A90016A40A /* ToolViewController.m */,
+				F43C24EA1C4B5D2E0016A40A /* DMHY.xcdatamodeld */,
+				F43C25021C4B741B0016A40A /* DetailSubscribeTableViewController.h */,
+				F43C25031C4B741B0016A40A /* DetailSubscribeTableViewController.m */,
+				F4C57DEA1C4F7C4400C5C37E /* TorrentTableViewCell.h */,
+				F4C57DEB1C4F7C4400C5C37E /* TorrentTableViewCell.m */,
+				F4FA8D421C508F0F005D6FF6 /* DMHYTool.h */,
+				F4FA8D431C508F0F005D6FF6 /* DMHYTool.m */,
+			);
+			path = DMHY;
+			sourceTree = "<group>";
+		};
+		F43C24861C4B36060016A40A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F43C24A91C4B40020016A40A /* CoreData.framework */,
+				F43C24871C4B36060016A40A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F43C24B01C4B4CA80016A40A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F43C25061C4B836C0016A40A /* TorrentItem.h */,
+				F43C25071C4B836C0016A40A /* TorrentItem.m */,
+				F43C24F91C4B66270016A40A /* DMHYCategory+CoreDataProperties.h */,
+				F43C24FA1C4B66270016A40A /* DMHYCategory+CoreDataProperties.m */,
+				F43C24FB1C4B66270016A40A /* DMHYCategory.h */,
+				F43C24FC1C4B66270016A40A /* DMHYCategory.m */,
+				F43C24ED1C4B5EEF0016A40A /* DMHYKeyword+CoreDataProperties.h */,
+				F43C24EE1C4B5EEF0016A40A /* DMHYKeyword+CoreDataProperties.m */,
+				F43C24EF1C4B5EEF0016A40A /* DMHYKeyword.h */,
+				F43C24F01C4B5EEF0016A40A /* DMHYKeyword.m */,
+				F43C24F11C4B5EEF0016A40A /* DMHYTorrent+CoreDataProperties.h */,
+				F43C24F21C4B5EEF0016A40A /* DMHYTorrent+CoreDataProperties.m */,
+				F43C24F31C4B5EEF0016A40A /* DMHYTorrent.h */,
+				F43C24F41C4B5EEF0016A40A /* DMHYTorrent.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F43C24821C4B36060016A40A /* DMHY */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43C249D1C4B36060016A40A /* Build configuration list for PBXNativeTarget "DMHY" */;
+			buildPhases = (
+				EDEAEBB5E7654F44DBE5C255 /* Check Pods Manifest.lock */,
+				F43C247F1C4B36060016A40A /* Sources */,
+				F43C24801C4B36060016A40A /* Frameworks */,
+				F43C24811C4B36060016A40A /* Resources */,
+				8E0F5AE6D8027ED3AF5B2A67 /* Embed Pods Frameworks */,
+				69BE2184EC3DF7A3507A1C3B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DMHY;
+			productName = DMHY;
+			productReference = F43C24831C4B36060016A40A /* DMHY.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F43C247B1C4B36060016A40A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = yaqinking;
+				TargetAttributes = {
+					F43C24821C4B36060016A40A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = F43C247E1C4B36060016A40A /* Build configuration list for PBXProject "DMHY" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F43C247A1C4B36060016A40A;
+			productRefGroup = F43C24841C4B36060016A40A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F43C24821C4B36060016A40A /* DMHY */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F43C24811C4B36060016A40A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43C24991C4B36060016A40A /* LaunchScreen.storyboard in Resources */,
+				F43C24961C4B36060016A40A /* Assets.xcassets in Resources */,
+				F43C24941C4B36060016A40A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69BE2184EC3DF7A3507A1C3B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DMHY/Pods-DMHY-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E0F5AE6D8027ED3AF5B2A67 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DMHY/Pods-DMHY-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDEAEBB5E7654F44DBE5C255 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F43C247F1C4B36060016A40A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C57DEC1C4F7C4400C5C37E /* TorrentTableViewCell.m in Sources */,
+				F43C24A81C4B38A90016A40A /* ToolViewController.m in Sources */,
+				F43C248B1C4B36060016A40A /* AppDelegate.m in Sources */,
+				F43C24F71C4B5EEF0016A40A /* DMHYTorrent+CoreDataProperties.m in Sources */,
+				F43C24FD1C4B66270016A40A /* DMHYCategory+CoreDataProperties.m in Sources */,
+				F4FA8D441C508F0F005D6FF6 /* DMHYTool.m in Sources */,
+				F43C24A21C4B37410016A40A /* HomeTableViewController.m in Sources */,
+				F43C25041C4B741B0016A40A /* DetailSubscribeTableViewController.m in Sources */,
+				F43C24FE1C4B66270016A40A /* DMHYCategory.m in Sources */,
+				F43C25081C4B836C0016A40A /* TorrentItem.m in Sources */,
+				F43C24F81C4B5EEF0016A40A /* DMHYTorrent.m in Sources */,
+				F43C24EC1C4B5D2E0016A40A /* DMHY.xcdatamodeld in Sources */,
+				F43C24F51C4B5EEF0016A40A /* DMHYKeyword+CoreDataProperties.m in Sources */,
+				F43C24A51C4B37640016A40A /* SubscribeTableViewController.m in Sources */,
+				F43C24881C4B36060016A40A /* main.m in Sources */,
+				F43C24F61C4B5EEF0016A40A /* DMHYKeyword.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F43C24921C4B36060016A40A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F43C24931C4B36060016A40A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F43C24971C4B36060016A40A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F43C24981C4B36060016A40A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F43C249B1C4B36060016A40A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F43C249C1C4B36060016A40A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F43C249E1C4B36060016A40A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2CA3AF7E2A5FE97615E0E5A /* Pods-DMHY.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DMHY/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.yaqinking.DMHY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F43C249F1C4B36060016A40A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 093CEF69ECFDAD03309D06D5 /* Pods-DMHY.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DMHY/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.yaqinking.DMHY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F43C247E1C4B36060016A40A /* Build configuration list for PBXProject "DMHY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43C249B1C4B36060016A40A /* Debug */,
+				F43C249C1C4B36060016A40A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43C249D1C4B36060016A40A /* Build configuration list for PBXNativeTarget "DMHY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43C249E1C4B36060016A40A /* Debug */,
+				F43C249F1C4B36060016A40A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F43C24EA1C4B5D2E0016A40A /* DMHY.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F43C24EB1C4B5D2E0016A40A /* DMHY.xcdatamodel */,
+			);
+			currentVersion = F43C24EB1C4B5D2E0016A40A /* DMHY.xcdatamodel */;
+			path = DMHY.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F43C247B1C4B36060016A40A /* Project object */;
+}

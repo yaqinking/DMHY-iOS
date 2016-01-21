@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
+    <entity name="Category" representedClassName="DMHYCategory" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="keywords" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Keyword" inverseName="category" inverseEntity="Keyword" syncable="YES"/>
+    </entity>
+    <entity name="Keyword" representedClassName="DMHYKeyword" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="keywords" inverseEntity="Category" syncable="YES"/>
+        <relationship name="torrents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Torrent" inverseName="keyword" inverseEntity="Torrent" syncable="YES"/>
+    </entity>
+    <entity name="Torrent" representedClassName="DMHYTorrent" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="magnet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pubDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="keyword" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Keyword" inverseName="torrents" inverseEntity="Keyword" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Keyword" positionX="-45" positionY="0" width="128" height="105"/>
+        <element name="Torrent" positionX="-9" positionY="63" width="128" height="150"/>
+        <element name="Category" positionX="27" positionY="135" width="128" height="90"/>
+    </elements>
+</model>
