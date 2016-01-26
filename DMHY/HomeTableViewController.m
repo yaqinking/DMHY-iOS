@@ -40,6 +40,9 @@
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 
+@property (nonatomic, strong) NSURL *downloadURL;
+@property (nonatomic, getter=isShare) BOOL share;
+
 @end
 
 @implementation HomeTableViewController
@@ -85,6 +88,55 @@
     [self setupTorrentsData];
 }
 
+- (void) addLongPressGestureToCell:(UITableViewCell *)cell {
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleShare:)];
+    [cell addGestureRecognizer:longPress];
+}
+
+- (void) handleShare:(id) sender {
+    UILongPressGestureRecognizer *longPress = (UILongPressGestureRecognizer *)sender;
+    CGPoint location = [longPress locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
+//    NSLog(@"Long Press Row %li",indexPath.row);
+    self.share = YES;
+    UIGestureRecognizerState state = longPress.state;
+    switch (state) {
+        case UIGestureRecognizerStateBegan:
+            [self queryDownloadURLWithIndexPath:indexPath];
+            break;
+        case UIGestureRecognizerStateEnded:
+            break;
+        default:
+            break;
+    }
+    
+}
+
+- (void) presentShareActivitiesWithItems:(NSArray *)items toSourceView:(UIView *)sourceView {
+    UIActivityViewController *shareController = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+    NSArray *excluedActivities = @[UIActivityTypePostToTwitter,
+                                   UIActivityTypePostToFacebook,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToTencentWeibo,
+                                   UIActivityTypePostToVimeo,
+                                   UIActivityTypePostToWeibo,
+                                   UIActivityTypePrint,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypeOpenInIBooks,
+                                   UIActivityTypeMessage,
+                                   UIActivityTypeMail,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeAddToReadingList];
+    shareController.excludedActivityTypes = excluedActivities;
+    shareController.modalPresentationStyle = UIModalPresentationPopover;
+    shareController.popoverPresentationController.sourceView = sourceView;
+    shareController.popoverPresentationController.sourceRect = sourceView.bounds;
+    [self presentViewController:shareController
+                       animated:YES
+                     completion:nil];
+
+}
+
 - (void) setupTorrentsData {
     for (DMHYKeyword *keyword in self.keywordsToday) {
         [self setupTorrentsWithKeyword:keyword.name];
@@ -109,12 +161,6 @@
         [xmlDoc enumerateElementsWithXPath:kXPathTorrentItem usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
             if (idx < 4) {
                 TorrentItem *item = [[TorrentItem alloc] init];
-                /*
-                if (idx == 0) {
-                    item.new = YES;
-                } else {
-                    item.new = NO;
-                }*/
                 NSString *dateString = [[element firstChildWithTag:@"pubDate"] stringValue];
                 item.pubDate = [self formatedDateStringFromDMHYDateString:dateString];
                 item.title = [[element firstChildWithTag:@"title"] stringValue];
@@ -154,21 +200,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TorrentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TorrentCell" forIndexPath:indexPath];
     TorrentItem *torrent = self.torrents[indexPath.row];
-    /*
-    if (torrent.isNew) {
-        cell.backgroundColor = [UIColor greenColor];
-    }
-     
-    if (indexPath.row %6 == 0) {
-        cell.backgroundColor = [UIColor greenColor];
-    }
-     */
     cell.torrentInfo.text = [NSString stringWithFormat:@"%@ %@", torrent.pubDate, torrent.title];
-    
+    [self addLongPressGestureToCell:cell];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.share = NO;
     [self queryDownloadURLWithIndexPath:indexPath];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -197,15 +235,25 @@
             NSString *downloadString = [urlArr firstObject];
             NSLog(@"DL: %@",downloadString);
             NSString *dlURLString = [NSString stringWithFormat:DMHYURLPrefixFormat,downloadString];
-            [DMHYTool writeToPasteboardWithString:dlURLString];
-            NSLog(@"Writed");
-            dispatch_async(dispatch_get_main_queue(), ^{
-                JGProgressHUD *copiedHUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleLight];
-                copiedHUD.textLabel.text = @"已拷贝 DL 链接！";
-                copiedHUD.indicatorView = [[JGProgressHUDSuccessIndicatorView alloc] init];
-                [copiedHUD showInView:self.view];
-                [copiedHUD dismissAfterDelay:3.0];
-            });
+            NSLog(@"isShare %i",self.isShare);
+            if (self.isShare) {
+                NSArray *shareItems = @[[NSURL URLWithString:dlURLString]];
+//                NSLog(@"shareItems %@",shareItems);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    TorrentTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+                    [self presentShareActivitiesWithItems:shareItems toSourceView:cell];
+                });
+            } else {
+                [DMHYTool writeToPasteboardWithString:dlURLString];
+                NSLog(@"Writed");
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    JGProgressHUD *copiedHUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleLight];
+                    copiedHUD.textLabel.text = @"已拷贝 DL 链接！";
+                    copiedHUD.indicatorView = [[JGProgressHUDSuccessIndicatorView alloc] init];
+                    [copiedHUD showInView:self.view];
+                    [copiedHUD dismissAfterDelay:3.0];
+                });
+            }
         });
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
